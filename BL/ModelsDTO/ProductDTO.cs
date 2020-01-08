@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BL.ModelsDTO
 {
+   
   public  class ProductDTO
     {
         public int Id { get; set; }
@@ -15,12 +16,13 @@ namespace BL.ModelsDTO
         public DateTime TimeCreation { get; private set; }
         public CategoryDTO Category { get; set; }
         public ProviderDTO Provider { get; set; }
-    
+
         public ProductDTO()
         {
-            TimeCreation = DateTime.Now;
+            Category = new CategoryDTO();
+            Provider = new ProviderDTO();
         }
-
+      
 
     }
 }

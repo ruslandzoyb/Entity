@@ -10,8 +10,8 @@ namespace BL.ModelsDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<ProductDTO> Products { get; set; }
-        public List<ProviderDTO> Providers { get; set; }
+        public  virtual ICollection<ProductDTO> Products { get; set; }
+        public virtual ICollection<ProviderDTO> Providers { get; set; }
         
     }
 }

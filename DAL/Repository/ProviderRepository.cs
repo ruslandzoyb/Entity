@@ -17,34 +17,38 @@ namespace DAL.Repository
         }
         public void Create(Provider item)
         {
-            throw new NotImplementedException();
+            db.Providers.Add(item);
         }
 
         public void Delete(int id)
         {
-         
+            var pr = db.Providers.Find(id);
+            if (pr!=null)
+            {
+                db.Providers.Remove(pr);
+            }
         }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public Provider GetElement(int id)
+        public Provider GetElement(int? id)
         {
-            throw new NotImplementedException();
+            return db.Providers.Find(id);
+           
         }
 
         public IEnumerable<Provider> GetList()
         {
-            throw new NotImplementedException();
+            return db.Providers.ToList();
         }
 
        
 
+
+
         public void Update(Provider item)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

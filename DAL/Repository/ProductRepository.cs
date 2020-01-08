@@ -31,25 +31,26 @@ namespace DAL.Repository
             }
         }
 
-        public void Dispose()
-        {
-           // throw new NotImplementedException();
-        }
+      
 
-        public Product GetElement(int id)
+        public Product GetElement(int? id)
         {
            return db.Products.Find(id);
         }
 
         public IEnumerable<Product> GetList()
         {
+
             return db.Products;
+           
+
         }
 
        
 
         public void Update(Product item)
         {
+           
             db.Entry(item).State = EntityState.Modified;
         }
     }

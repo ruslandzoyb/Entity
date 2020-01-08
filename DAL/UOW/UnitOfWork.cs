@@ -21,17 +21,7 @@ namespace DAL.UOW
             this.db = new ProductContext();
         }
        
-      /*  public ProductRepository Products
-        {
-            get
-            {
-                if (categoryRepository == null)
-                {
-                    productRepository = new ProductRepository(db);
-                }
-                return productRepository;
-            }
-        }*/
+     
 
      
 
@@ -39,7 +29,7 @@ namespace DAL.UOW
         {
             get
             {
-                if (categoryRepository == null)
+                if (productRepository == null)
                 {
                     productRepository = new ProductRepository(db);
                 }
@@ -73,6 +63,7 @@ namespace DAL.UOW
         public void Save()
         {
             db.SaveChanges();
+            
         }
     }
 }

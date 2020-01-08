@@ -18,10 +18,16 @@ namespace BL.Services
         }
         public void Create(CategoryDTO item)
         {
+
             throw new NotImplementedException();
         }
 
         public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(CategoryDTO item)
         {
             throw new NotImplementedException();
         }
@@ -36,7 +42,7 @@ namespace BL.Services
             throw new NotImplementedException();
         }
 
-        public CategoryDTO GetElement(int id)
+        public CategoryDTO GetElement(int? id)
         {
             throw new NotImplementedException();
         }
@@ -47,6 +53,11 @@ namespace BL.Services
         }
 
         public void Update(CategoryDTO item)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerable<CategoryDTO> IService<CategoryDTO>.GetList()
         {
             throw new NotImplementedException();
         }

@@ -19,34 +19,33 @@ namespace DAL.Repository
         }
         public void Create(Category item)
         {
-            throw new NotImplementedException();
+            db.Categories.Add(item);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
-        }
+            var cat = db.Categories.Find(id);
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Category GetElement(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Category> GetList()
-        {
-            throw new NotImplementedException();
+            db.Categories.Remove(cat);
         }
 
        
 
+        public Category GetElement(int? id)
+        {
+            return db.Categories.Find(id);
+        }
+
+        public IEnumerable<Category> GetList()
+        {
+            return db.Categories.ToList();
+        }
+
+        
+
         public void Update(Category item)
         {
-            throw new NotImplementedException();
+          //  throw new NotImplementedException();
         }
     }
 }

@@ -8,9 +8,9 @@ namespace BL.ServiceInterfaces
 {
    public interface IServices
     {
-          ProductService Products { get;  }
-         CategoryService Categories { get;  }
-         ProviderService Providers { get;  }
+          IProductService Products { get;  }
+         ICategoryService Categories { get;  }
+         IProviderService Providers { get;  }
         
     }
 }

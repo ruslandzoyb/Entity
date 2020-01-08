@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace BL.Services
 {
-    class Services : IServices
+  public  class Services : IServices
     {
         private ProductService products;
         private CategoryService categories;
         private ProviderService providers;
-        public ProductService Products { get {
+        public IProductService Products { get {
                 if (products == null)
                 {
                     products = new ProductService();
@@ -21,7 +21,7 @@ namespace BL.Services
 
             } }
 
-        public CategoryService Categories
+        public ICategoryService Categories
         {
             get
             {
@@ -34,7 +34,7 @@ namespace BL.Services
             }
         }
 
-        public ProviderService Providers
+        public IProviderService Providers
         {
             get
             {
